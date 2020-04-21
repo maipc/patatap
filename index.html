@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patatap Clone</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
     <script type="text/javascript" src="paper-full.js"></script>
     <script type="text/paperscript" canvas="canvas">
-	    var path = new Path();
-	    path.strokeColor = 'black';
-	    var start = new Point(100, 100);
-	    path.moveTo(start);
-	    path.lineTo(start + [ 100, -50 ]);
+        for(var i=0; i<1000; i+=100) {
+            for(var j=0; j<1000; j+=100) {
+                new Path.Circle(new Point(i,j), 5).fillColor = 'white';
+            }
+        }
     </script>
 </head>
 
 <body>
-    <canvas id="canvas" resize></canvas>
+    <canvas id="canvas"></canvas>
 </body>
 
 </html>
